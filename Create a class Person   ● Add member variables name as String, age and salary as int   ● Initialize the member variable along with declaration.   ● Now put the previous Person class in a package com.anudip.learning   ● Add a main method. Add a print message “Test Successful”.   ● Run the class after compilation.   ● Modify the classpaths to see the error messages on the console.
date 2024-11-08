@@ -1,0 +1,21 @@
+package com.anudip.learning;
+
+public class Person {
+
+    // Member variables initializing with values
+    String name = "kulsum";
+    int age = 22;
+    int salary = 20000;
+
+    public static void main(String[] args) {
+
+        // Create an instance of Person
+        Person person = new Person();
+
+        // Print a success message
+        System.out.println("Test Successful");
+    }
+}
+
+OUTPUT:
+Test Successful
