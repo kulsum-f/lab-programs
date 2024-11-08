@@ -1,0 +1,80 @@
+package LabAssignments;
+enum BankName
+{
+ICICI(6.3),
+HDFC(5.8),
+SBI(6.0);
+double interestRate;
+
+BankName(double interestRate) // Constructor to set
+the interest rate for each enum constant
+{
+this.interestRate = interestRate;
+}
+}
+
+public class BankAccount {
+double accountBalance; // Attributes for the account balance,
+holder's name, and bank name
+String accountHolderName;
+BankName bankName;
+
+public BankAccount(double accountBalance, String accountHolderName, BankName
+bankName) // Constructor to initialize a new BankAccount
+{
+this.accountBalance = accountBalance;
+this.accountHolderName = accountHolderName;
+this.bankName = bankName;
+}
+
+public double getAccountBalance() // Getter method for account
+balance
+{
+return accountBalance;
+}
+
+public String getAccountHolderName() // Getter method for account
+holder name
+{
+return accountHolderName;
+}
+
+public BankName getBankName() // Getter method for bank name
+{
+return bankName;
+}
+
+public void deposit(double amount) // Method to deposit an amount to the
+account balance
+{
+accountBalance += amount;
+}
+
+public void withdraw(double amount) // Method to withdraw an amount from
+the account balance
+{
+accountBalance -= amount;
+}
+
+public void calculateInterest(int numberOfYears) // Method to calculate and
+print the total interest
+{
+double totalInterest = bankName.interestRate* numberOfYears * accountBalance;
+System.out.println(totalInterest);
+}
+
+public static void main(String[] args) {
+BankAccount account1 = new BankAccount(12000,"Harry",BankName.HDFC);
+account1.deposit(5000);
+System.out.println(account1.getAccountBalance());
+System.out.println(account1.bankName);
+account1.calculateInterest(10);
+}
+}
+
+
+
+OUTPUT:
+17000.0
+HDFC
+986000.0
