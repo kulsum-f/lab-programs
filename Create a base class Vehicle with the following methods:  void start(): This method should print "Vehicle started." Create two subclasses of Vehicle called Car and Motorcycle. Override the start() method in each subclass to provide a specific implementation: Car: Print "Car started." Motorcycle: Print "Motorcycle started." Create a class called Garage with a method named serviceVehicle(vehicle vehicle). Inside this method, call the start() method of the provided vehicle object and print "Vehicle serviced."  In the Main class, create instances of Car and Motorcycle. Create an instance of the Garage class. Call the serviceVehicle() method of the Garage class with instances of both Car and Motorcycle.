@@ -1,0 +1,57 @@
+package LabAssignments;
+class Vehicle
+{
+void start()
+{
+System.out.println("vehicle started");
+}
+}
+
+
+class Car extends Vehicle // subclass car
+{
+void start()
+{
+System.out.println("car started");
+}
+}
+
+
+class Motorcycle extends Vehicle // subclass motorcycle
+{
+void start()
+{
+System.out.println("motorcycle started");
+}
+}
+
+
+class Garage // garage class
+{
+void serviceVehicle(Vehicle vehicle) //method to service vehicles
+{
+vehicle.start(); // calling the method of garage class with instances
+of car and motorcycle
+System.out.println("vehicle service");
+}
+}
+
+public class Vehicles {
+public static void main(String[] args) {
+Car c = new Car(); //instances of car and motorcycle
+Motorcycle mc = new Motorcycle();
+Garage g = new Garage();
+g.serviceVehicle(c); // calling the method of garage class with
+instances of car and motorcycle
+g.serviceVehicle(mc);
+}
+}
+
+
+
+
+OUTPUT:
+car started
+vehicle service
+motorcycle started
+vehicle service
