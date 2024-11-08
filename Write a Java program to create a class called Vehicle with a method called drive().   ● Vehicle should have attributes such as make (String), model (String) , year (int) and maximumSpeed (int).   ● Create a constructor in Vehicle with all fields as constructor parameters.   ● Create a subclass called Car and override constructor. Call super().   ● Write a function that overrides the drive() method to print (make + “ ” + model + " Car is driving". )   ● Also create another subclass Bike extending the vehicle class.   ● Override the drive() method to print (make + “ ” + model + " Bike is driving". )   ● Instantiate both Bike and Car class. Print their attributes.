@@ -1,0 +1,89 @@
+package LabAssignments;
+
+class Vehicle1 //Base class Vehicle
+{
+protected String make; // Attributes of the Vehicle class
+protected String model;
+protected int year;
+protected int maximumSpeed;
+public Vehicle1(String make, String model, int year, int maximumSpeed) 
+
+//Constructor for Vehicle class
+{
+this.make = make;
+this.model = model;
+this.year = year;
+this.maximumSpeed = maximumSpeed;
+}
+
+public void drive()
+{
+System.out.println("Vehicle is driving.");
+}
+
+public void displayInfo() // Method to display vehicle details
+{
+System.out.println("Make: " + make);
+System.out.println("Model: " + model);
+System.out.println("Year: " + year);
+System.out.println("Max Speed: " + maximumSpeed + " km/h");
+}
+}
+
+class Car extends Vehicle1 //Subclass Car extend Vehicle
+{
+public Car(String make, String model, int year, int maximumSpeed) // Constructor
+for Car class
+{
+super(make, model, year, maximumSpeed); // Call to the Vehicle constructor
+}
+
+public void drive()
+{
+System.out.println(make + " " + model + " Car is driving.");
+}
+}
+
+class Bike extends Vehicle1 //Subclass Bike extending Vehicle
+{
+public Bike(String make, String model, int year, int maximumSpeed) //
+Constructor for Bike class
+{
+super(make, model, year, maximumSpeed); // Call to the Vehicle constructor
+}
+public void drive()
+{
+System.out.println(make + " " + model + " Bike is driving.");
+}
+}
+
+public class Vehicle {
+public static void main(String[] args) {
+Car car = new Car("Hyundai", "i10", 2007, 180); //Instance of a Car
+System.out.println("Car Details:");
+car.displayInfo();
+car.drive();
+System.out.println();
+// Creating an instance of Bike
+Bike bike = new Bike("TVS", "Victor", 2004, 140); //Instance of a Bike
+System.out.println("Bike Details:");
+bike.displayInfo();
+bike.drive();
+}
+}
+
+
+
+OUTPUT:
+Car Details:
+Make: Hyundai
+Model: i10
+Year: 2007
+Max Speed: 180 km/h
+Hyundai i10 Car is driving.
+Bike Details:
+Make: TVS
+Model: Victor
+Year: 2004
+Max Speed: 140 km/h
+TVS Victor Bike is driving.
