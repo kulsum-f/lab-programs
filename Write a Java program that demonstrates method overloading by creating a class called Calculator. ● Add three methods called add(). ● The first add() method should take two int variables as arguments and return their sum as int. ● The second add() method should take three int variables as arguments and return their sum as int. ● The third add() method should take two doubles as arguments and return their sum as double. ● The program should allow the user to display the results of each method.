@@ -1,0 +1,69 @@
+package LabAssignments;
+
+import java.util.Scanner;
+
+public class Calculator 
+{
+public int add(int a, int b) // Method to add two integers
+{
+return a + b;
+}
+
+
+public int add(int a, int b, int c) // Method to add three integers
+{
+return a + b + c;
+}
+
+
+public double add(double a, double b) // Method to add two double values
+{
+return a + b;
+}
+
+
+public static void main(String[] args) {
+
+Scanner scanner = new Scanner(System.in);
+Calculator calculator = new Calculator();
+System.out.println("Enter two integers to add:");
+int int1 = scanner.nextInt();
+int int2 = scanner.nextInt();
+
+
+System.out.println("Sum of two integers: " + calculator.add(int1,
+int2));
+
+System.out.println("\nEnter three integers to add:");
+int int3 = scanner.nextInt();
+int int4 = scanner.nextInt();
+int int5 = scanner.nextInt();
+
+System.out.println("Sum of three integers: " + calculator.add(int3,
+int4, int5));
+
+System.out.println("\nEnter two double values to add:");
+double double1 = scanner.nextDouble();
+double double2 = scanner.nextDouble();
+
+System.out.println("Sum of two doubles: " + calculator.add(double1,
+double2));
+scanner.close();
+}
+}
+
+
+OUTPUT:
+Enter two integers to add:
+20
+30
+Sum of two integers: 50
+Enter three integers to add:
+20
+20
+20
+Sum of three integers: 60
+Enter two double values to add:
+2.6
+3.1
+Sum of two doubles: 5.7
