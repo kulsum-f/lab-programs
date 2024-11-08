@@ -1,0 +1,82 @@
+package Lab4;
+public class BankAccount1
+{
+private String accountHolderName;
+private String bankName;
+private double accountBalance;
+//constructor to initialize bank account
+public BankAccount1(String accountHolderName, String bankName, double
+accountBalance)
+{
+this.accountHolderName = accountHolderName;
+this.bankName = bankName;
+this.accountBalance = accountBalance;
+}
+// Method to get the current balance
+public double getBalance()
+{
+return accountBalance;
+}
+public void deposit(double amount) // Method to deposit money into
+the account
+{
+if(amount > 0)
+{
+accountBalance += amount;
+Assignment-1
+System.out.println("deposited " + amount + " into " +
+accountHolderName + " account at " + bankName + " ");
+}
+else
+{
+System.out.println("deposit amount should be in
+positive");
+}
+}
+public void withdraw(double amount) //to withdraw money from the
+account
+{
+if(amount > 0 && amount <= accountBalance)
+{
+accountBalance = amount;
+System.out.println("withdrew " + amount + " from " +
+accountHolderName + "account at " + bankName + " ");
+}
+else
+{
+System.out.println("not enough balance or invalid amount
+for withdrawal from " + accountHolderName + "acoount");
+}
+}
+public static void main(String[] args) {
+BankAccount1 acc1 = new BankAccount1("kulsum ", "ICICI", 100000);
+// Creating three bank accounts
+BankAccount1 acc2 = new BankAccount1("fathima ", "HDFC", 200000);
+BankAccount1 acc3 = new BankAccount1("shariff ", "SBI", 300000);
+acc1.deposit( 20000); // Depositing money into each account
+acc2.deposit( 30000);
+acc3.deposit( 40000);
+acc1.withdraw( 10000); // Withdrawing money from accounts
+acc2.withdraw( 15000);
+acc3.withdraw( 20000);
+System.out.println(acc1.accountHolderName + " balance in " +
+acc1.bankName + ": " + acc1.getBalance()); //displaying all account balance
+System.out.println(acc2.accountHolderName + " balance in " +
+acc2.bankName + ": " + acc2.getBalance());
+System.out.println(acc3.accountHolderName + " balance in " +
+acc3.bankName + ": " + acc3.getBalance());
+}
+}
+
+
+
+OUTPUT:
+deposited 20000.0 into kulsum account at ICICI
+deposited 30000.0 into fathima account at HDFC
+deposited 40000.0 into shariff account at SBI
+withdrew 10000.0 from kulsum account at ICICI
+withdrew 15000.0 from fathima account at HDFC
+withdrew 20000.0 from shariff account at SBI
+kulsum balance in ICICI: 10000.0
+fathima balance in HDFC: 15000.0
+shariff balance in SBI: 20000.0
