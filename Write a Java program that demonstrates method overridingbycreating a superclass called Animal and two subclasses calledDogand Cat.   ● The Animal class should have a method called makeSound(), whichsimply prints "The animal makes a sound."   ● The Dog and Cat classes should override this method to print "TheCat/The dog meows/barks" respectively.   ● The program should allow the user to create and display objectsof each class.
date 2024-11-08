@@ -1,0 +1,43 @@
+package LabAssignments;
+class AnimalSound // Superclass
+{
+public void makeSound() {
+System.out.println("The animal makes a sound");
+}
+}
+class Dog extends AnimalSound // Subclass Dog
+{
+public void makeSound() // Overriding the makeSound method
+{
+System.out.println("The dog barks");
+}
+}
+class Cat extends AnimalSound // Subclass Cat
+{
+public void makeSound() // Overriding the makeSound method
+{
+System.out.println("The cat meows");
+}
+}
+public class Animal {
+public static void main(String[] args) {
+AnimalSound animal = new AnimalSound();
+Dog myDog = new Dog();
+Cat myCat = new Cat();
+System.out.println("Animal sound");
+animal.makeSound();
+System.out.println("\n Dog sound");
+myDog.makeSound();
+System.out.println("\n Cat sound");
+myCat.makeSound();
+}
+}
+
+
+OUTPUT:
+Animal sound
+The animal makes a sound
+Dog sound
+The dog barks
+Cat sound
+The cat meows
