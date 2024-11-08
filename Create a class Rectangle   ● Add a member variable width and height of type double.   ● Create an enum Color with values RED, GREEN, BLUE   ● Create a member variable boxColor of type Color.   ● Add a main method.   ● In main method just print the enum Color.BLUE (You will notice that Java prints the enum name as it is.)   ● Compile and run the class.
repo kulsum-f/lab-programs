@@ -1,0 +1,25 @@
+package LabAssignments;
+
+public class Rectangle {
+
+    // Member variables for width and height
+    double width;
+    double height;
+
+    // Enum for Color
+    public enum Color {
+        RED, GREEN, BLUE
+    }
+
+    // Member variable for box color
+    private Color boxColor;
+
+    public static void main(String[] args) {
+
+        // Print the enum Color.BLUE
+        System.out.println(Color.BLUE);
+    }
+}
+
+OUTPUT:
+BLUE
