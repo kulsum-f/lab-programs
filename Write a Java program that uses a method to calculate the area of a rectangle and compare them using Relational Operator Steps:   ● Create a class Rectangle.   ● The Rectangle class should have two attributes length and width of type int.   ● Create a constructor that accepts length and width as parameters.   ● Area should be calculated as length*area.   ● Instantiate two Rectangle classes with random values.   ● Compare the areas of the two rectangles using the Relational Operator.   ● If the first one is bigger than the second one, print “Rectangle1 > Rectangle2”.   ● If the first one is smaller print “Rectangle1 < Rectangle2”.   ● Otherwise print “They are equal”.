@@ -1,0 +1,46 @@
+package lab2;
+class Rectangle {
+int length;
+int width;
+
+// Constructor to accept length and width
+Rectangle(int length, int width)
+{
+this.length = length;
+this.width = width;
+}
+
+// Method to calculate the area of rectangle
+int calculateArea()
+{
+return length * width;
+}
+
+public static void main(String[] args) {
+// Instantiating two Rectangle classes with random values
+Rectangle r1 = new Rectangle(10,7);
+Rectangle r2 = new Rectangle(8,7);
+int area1 = r1.calculateArea();
+int area2 = r2.calculateArea();
+
+// Comparing the areas using relational operators
+if(area1 > area2)
+{
+System.out.println("Rectangle1 > Rectangle2");
+}
+
+else if(area1 < area2)
+{
+System.out.println("Rectangle1 < Rectangle2");
+}
+
+else
+{
+System.out.println("they are equal");
+}
+}
+}
+
+
+Output:
+Rectangle1 > Rectangle2
